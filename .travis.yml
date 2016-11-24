@@ -4,4 +4,4 @@ cache: cocoapods
 osx_image: xcode8.1
 xcode_sdk: iphonesimulator10.0
 xcode_project: demo-app/demo-app.xcodeproj
-
+xcode_workspace: demo-app
