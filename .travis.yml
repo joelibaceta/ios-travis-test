@@ -1,8 +1,6 @@
 sudo: required
 language: objective-c
-cache: cocoapods
-osx_image: xcode8.1
-xcode_sdk: iphonesimulator10.0
+cache: cocoapods 
 xcode_project: demo-app
 xcode_workspace: demo-app
 
@@ -10,7 +8,7 @@ env:
   matrix: 
     - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.0"
     - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=10.0"
-    - DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.0"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.1"
 
 before_install:
   - xcrun simctl list
