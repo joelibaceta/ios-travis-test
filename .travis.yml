@@ -6,8 +6,8 @@ xcode_workspace: demo-app
 
 env:
   matrix:  
-    - DESTINATION="platform=iOS Simulator,OS=10.1, name=iPhone 6" 
-    - DESTINATION="platform=iOS Simulator,OS=10.1, name=iPhone 7"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=10.1" 
+    - DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.1"
     
 before_install:
   - xcrun simctl list
