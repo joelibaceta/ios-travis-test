@@ -5,3 +5,12 @@ osx_image: xcode8.1
 xcode_sdk: iphonesimulator10.0
 xcode_project: demo-app/demo-app.xcodeproj
 xcode_workspace: demo-app
+
+before_install:
+  - xcrun simctl list
+  - brew update; brew update
+install:
+  - brew install coreutils
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+script:
+  - gstdbuf -o 0 xcodebuild build test -scheme demo-app -destination "${DESTINATION}" | xcpretty -c && exit ${PIPESTATUS[0]}
