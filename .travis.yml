@@ -6,6 +6,11 @@ xcode_sdk: iphonesimulator10.0
 xcode_project: demo-app/demo-app.xcodeproj
 xcode_workspace: demo-app
 
+env:
+  matrix: 
+    - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.0"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=10.0"
+
 before_install:
   - xcrun simctl list
   - brew update; brew update
